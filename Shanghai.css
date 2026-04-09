@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: #333333;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #FF6B6B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3% 2%;
+}
+
+header h1 {
+    font-size: calc(20px + 2vw);
+    font-weight: 700;
+    margin-bottom: 0.5%;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: calc(10px + 0.5vw);
+}
+
+/* ===== Nav ===== */
+nav {
+    background-color: #4ECDC4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1% 1.5%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: calc(9px + 0.4vw);
+    padding: 0.8% 2%;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #FF6B6B;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.5% 2%;
+    flex: 1;
+    width: 100%;
+}
+
+/* ===== Section Headings ===== */
+#where h2,
+#todo h2,
+#food h2 {
+    color: #2C3E50;
+    font-size: calc(14px + 1.2vw);
+    font-weight: 700;
+    border-bottom: 4px solid #FFD93D;
+    padding-bottom: 0.5%;
+    margin: 3% 0 2%;
+    width: 100%;
+}
+
+/* ===== Card Containers ===== */
+#where,
+#todo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+/* ===== Cards ===== */
+.sites,
+.activity-info {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 0;
+    flex: 1 1 280px;
+    max-width: 340px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.sites:hover,
+.activity-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sites {
+    border-left: 4px solid #FF6B6B;
+}
+
+.activity-info {
+    border-left: 4px solid #4ECDC4;
+}
+
+/* ===== Card Images ===== */
+.sites img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== Card Text ===== */
+.sites h3,
+.activity-info h3 {
+    color: #2C3E50;
+    font-size: calc(11px + 0.5vw);
+    margin: 3% 5% 2%;
+}
+
+.sites p,
+.activity-info p {
+    color: #555555;
+    font-size: calc(9px + 0.3vw);
+    line-height: 1.7;
+    margin: 0 5% 4%;
+}
+
+/* ===== Food Table ===== */
+#food {
+    overflow-x: auto;
+}
+
+.food-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.food-table thead tr {
+    background-color: #FFD93D;
+}
+
+.food-table th {
+    padding: 1.2% 2%;
+    text-align: left;
+    color: #2C3E50;
+    font-weight: 700;
+    font-size: calc(9px + 0.4vw);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.food-table tbody tr:nth-child(even) {
+    background-color: #FFF8E1;
+}
+
+.food-table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.food-table tbody tr:hover {
+    background-color: #E0F7FA;
+}
+
+.food-table td {
+    padding: 1% 2%;
+    font-size: calc(9px + 0.3vw);
+    color: #333333;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.food-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5% 2%;
+    font-size: calc(9px + 0.3vw);
+}
+
+footer a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFD93D;
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 750px) {
+    header {
+        padding: 4% 3%;
+    }
+
+    nav a {
+        padding: 1.2% 3%;
+        font-size: calc(8px + 0.5vw);
+    }
+
+    main {
+        padding: 3% 2.5%;
+    }
+
+    .sites,
+    .activity-info {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .sites img {
+        height: 200px;
+    }
+
+    .food-table th,
+    .food-table td {
+        padding: 1.5% 2%;
+    }
+}
