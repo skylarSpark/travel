@@ -8,9 +8,18 @@ body {
     color: #333333;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7;
+}
+
+#wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ===== Header ===== */
@@ -18,17 +27,16 @@ header {
     background-color: #FF6B6B;
     color: #FFFFFF;
     text-align: center;
-    padding: 3% 2%;
+    padding: 30px 20px;
 }
 
 header h1 {
     font-size: calc(20px + 2vw);
     font-weight: 700;
-    margin-bottom: 0.5%;
+    margin-bottom: 5px;
 }
 
 header p {
-    color: rgba(255, 255, 255, 0.9);
     font-size: calc(10px + 0.5vw);
 }
 
@@ -38,7 +46,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1% 1.5%;
+    padding: 10px 15px;
 }
 
 nav ul {
@@ -46,7 +54,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1%;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -55,109 +63,103 @@ nav a {
     color: #FFFFFF;
     font-weight: 600;
     font-size: calc(9px + 0.4vw);
-    padding: 0.8% 2%;
+    padding: 8px 20px;
     border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 nav a:hover {
     background-color: #FF6B6B;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
 }
 
 /* ===== Main ===== */
 main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 2.5% 2%;
+    padding: 25px 20px;
     flex: 1;
     width: 100%;
 }
 
 /* ===== Section Headings ===== */
-#where h2,
-#todo h2,
-#food h2 {
+h2 {
     color: #2C3E50;
     font-size: calc(14px + 1.2vw);
     font-weight: 700;
     border-bottom: 4px solid #FFD93D;
-    padding-bottom: 0.5%;
-    margin: 3% 0 2%;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
     width: 100%;
 }
 
-/* ===== Card Containers ===== */
-#where,
-#todo {
+/* ===== Where To Go ===== */
+#where {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
-}
-
-/* ===== Cards ===== */
-.sites,
-.activity-info {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 0;
-    flex: 1 1 280px;
-    max-width: 340px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
-}
-
-.sites:hover,
-.activity-info:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    gap: 20px;
 }
 
 .sites {
-    border-left: 4px solid #FF6B6B;
+    flex: 1 1 280px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #00000014;
 }
 
-.activity-info {
-    border-left: 4px solid #4ECDC4;
-}
-
-/* ===== Card Images ===== */
 .sites img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
     display: block;
 }
 
-/* ===== Card Text ===== */
-.sites h3,
+.sites h3 {
+    color: #FF6B6B;
+    font-size: calc(12px + 0.6vw);
+    padding: 10px 15px 0;
+}
+
+.sites p {
+    color: #555555;
+    font-size: calc(9px + 0.3vw);
+    line-height: 1.8;
+    padding: 8px 15px 15px;
+}
+
+/* ===== Things To Do ===== */
+#todo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.activity-info {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-left: 4px solid #4ECDC4;
+    padding: 20px;
+    flex: 1 1 280px;
+    box-shadow: 0 2px 8px #00000014;
+}
+
 .activity-info h3 {
     color: #2C3E50;
     font-size: calc(11px + 0.5vw);
-    margin: 3% 5% 2%;
+    margin-bottom: 8px;
 }
 
-.sites p,
 .activity-info p {
     color: #555555;
     font-size: calc(9px + 0.3vw);
     line-height: 1.7;
-    margin: 0 5% 4%;
 }
 
 /* ===== Food Table ===== */
-#food {
-    overflow-x: auto;
-}
-
 .food-table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px #00000014;
 }
 
 .food-table thead tr {
@@ -165,13 +167,11 @@ main {
 }
 
 .food-table th {
-    padding: 1.2% 2%;
+    padding: 12px 16px;
     text-align: left;
     color: #2C3E50;
     font-weight: 700;
     font-size: calc(9px + 0.4vw);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .food-table tbody tr:nth-child(even) {
@@ -187,14 +187,10 @@ main {
 }
 
 .food-table td {
-    padding: 1% 2%;
+    padding: 10px 16px;
     font-size: calc(9px + 0.3vw);
     color: #333333;
     border-bottom: 1px solid #EEEEEE;
-}
-
-.food-table tbody tr:last-child td {
-    border-bottom: none;
 }
 
 /* ===== Footer ===== */
@@ -202,7 +198,7 @@ footer {
     background-color: #2C3E50;
     color: #FFFFFF;
     text-align: center;
-    padding: 1.5% 2%;
+    padding: 15px 20px;
     font-size: calc(9px + 0.3vw);
 }
 
@@ -210,7 +206,6 @@ footer a {
     color: #FF6B6B;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
@@ -218,33 +213,102 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* ===== Theme Toggle Button ===== */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 200;
+    padding: 8px 16px;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    font-size: calc(9px + 0.3vw);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== Dark Theme ===== */
+body.dark {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark header {
+    background-color: #c0392b;
+}
+
+body.dark nav {
+    background-color: #16a085;
+}
+
+body.dark h2 {
+    color: #ecf0f1;
+}
+
+body.dark .sites {
+    background-color: #2d2d44;
+}
+
+body.dark .sites p {
+    color: #b0b0b0;
+}
+
+body.dark .activity-info {
+    background-color: #2d2d44;
+}
+
+body.dark .activity-info h3 {
+    color: #ecf0f1;
+}
+
+body.dark .activity-info p {
+    color: #b0b0b0;
+}
+
+body.dark .food-table thead tr {
+    background-color: #b8860b;
+}
+
+body.dark .food-table th {
+    color: #FFFFFF;
+}
+
+body.dark .food-table tbody tr:nth-child(even) {
+    background-color: #2d2d44;
+}
+
+body.dark .food-table tbody tr:nth-child(odd) {
+    background-color: #252540;
+}
+
+body.dark .food-table tbody tr:hover {
+    background-color: #3a3a5c;
+}
+
+body.dark .food-table td {
+    color: #e0e0e0;
+    border-bottom-color: #3a3a5c;
+}
+
+body.dark footer {
+    background-color: #0f0f1a;
+}
+
+body.dark #theme-toggle {
+    background-color: #ecf0f1;
+    color: #1a1a2e;
+    border-color: #1a1a2e;
+}
+
 /* ===== Responsive ===== */
 @media screen and (max-width: 750px) {
-    header {
-        padding: 4% 3%;
+    .sites {
+        flex: 1 1 100%;
     }
 
-    nav a {
-        padding: 1.2% 3%;
-        font-size: calc(8px + 0.5vw);
-    }
-
-    main {
-        padding: 3% 2.5%;
-    }
-
-    .sites,
     .activity-info {
         flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .sites img {
-        height: 200px;
-    }
-
-    .food-table th,
-    .food-table td {
-        padding: 1.5% 2%;
     }
 }
