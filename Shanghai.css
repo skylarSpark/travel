@@ -4,6 +4,11 @@
 }
 
 body {
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #FAFAFA;
     color: #333333;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -15,6 +20,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 img {
@@ -27,13 +33,12 @@ header {
     background-color: #FF6B6B;
     color: #FFFFFF;
     text-align: center;
-    padding: 30px 20px;
+    padding: 3% 2%;
 }
 
 header h1 {
     font-size: calc(20px + 2vw);
     font-weight: 700;
-    margin-bottom: 5px;
 }
 
 header p {
@@ -46,7 +51,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 10px 15px;
+    padding: 1% 1.5%;
 }
 
 nav ul {
@@ -54,7 +59,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 1%;
     flex-wrap: wrap;
 }
 
@@ -63,7 +68,7 @@ nav a {
     color: #FFFFFF;
     font-weight: 600;
     font-size: calc(9px + 0.4vw);
-    padding: 8px 20px;
+    padding: 0.8% 2%;
     border-radius: 20px;
 }
 
@@ -75,20 +80,20 @@ nav a:hover {
 main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 25px 20px;
+    padding: 2.5% 2%;
     flex: 1;
     width: 100%;
 }
 
 /* ===== Section Headings ===== */
 h2 {
-    color: #2C3E50;
+    color: #ecf0f1;
     font-size: calc(14px + 1.2vw);
     font-weight: 700;
     border-bottom: 4px solid #FFD93D;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    padding-bottom: 0.5%;
+    margin-bottom: 2%;
+    margin-top: 3%;
     width: 100%;
 }
 
@@ -96,7 +101,7 @@ h2 {
 #where {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2%;
 }
 
 .sites {
@@ -117,28 +122,40 @@ h2 {
 .sites h3 {
     color: #FF6B6B;
     font-size: calc(12px + 0.6vw);
-    padding: 10px 15px 0;
+    padding: 5%;
 }
 
 .sites p {
     color: #555555;
     font-size: calc(9px + 0.3vw);
     line-height: 1.8;
-    padding: 8px 15px 15px;
+    padding: 1% 4% 3%;
+}
+
+#map {
+    margin-top: 2%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#map iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
 }
 
 /* ===== Things To Do ===== */
 #todo {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2%;
 }
 
 .activity-info {
     background-color: #FFFFFF;
     border-radius: 10px;
     border-left: 4px solid #4ECDC4;
-    padding: 20px;
+    padding: 3%;
     flex: 1 1 280px;
     box-shadow: 0 2px 8px #00000014;
 }
@@ -146,7 +163,7 @@ h2 {
 .activity-info h3 {
     color: #2C3E50;
     font-size: calc(11px + 0.5vw);
-    margin-bottom: 8px;
+    margin-bottom: 1%;
 }
 
 .activity-info p {
@@ -167,18 +184,14 @@ h2 {
 }
 
 .food-table th {
-    padding: 12px 16px;
+    padding: 1.2% 2%;
     text-align: left;
     color: #2C3E50;
     font-weight: 700;
     font-size: calc(9px + 0.4vw);
 }
 
-.food-table tbody tr:nth-child(even) {
-    background-color: #FFF8E1;
-}
-
-.food-table tbody tr:nth-child(odd) {
+.food-table tbody tr {
     background-color: #FFFFFF;
 }
 
@@ -187,7 +200,7 @@ h2 {
 }
 
 .food-table td {
-    padding: 10px 16px;
+    padding: 1% 2%;
     font-size: calc(9px + 0.3vw);
     color: #333333;
     border-bottom: 1px solid #EEEEEE;
@@ -198,7 +211,7 @@ footer {
     background-color: #2C3E50;
     color: #FFFFFF;
     text-align: center;
-    padding: 15px 20px;
+    padding: 1.5% 2%;
     font-size: calc(9px + 0.3vw);
 }
 
@@ -243,10 +256,6 @@ body.dark nav {
     background-color: #16a085;
 }
 
-body.dark h2 {
-    color: #ecf0f1;
-}
-
 body.dark .sites {
     background-color: #2d2d44;
 }
@@ -275,11 +284,7 @@ body.dark .food-table th {
     color: #FFFFFF;
 }
 
-body.dark .food-table tbody tr:nth-child(even) {
-    background-color: #2d2d44;
-}
-
-body.dark .food-table tbody tr:nth-child(odd) {
+body.dark .food-table tbody tr {
     background-color: #252540;
 }
 

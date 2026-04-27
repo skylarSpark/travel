@@ -1,9 +1,10 @@
 function toggleTheme() {
-    document.body.classList.toggle("dark");
     let btn = document.getElementById("theme-toggle");
-    if (document.body.classList.contains("dark")) {
-        btn.textContent = "Light Mode";
-    } else {
+    if (document.body.className === "dark") {
+        document.body.className = "";
         btn.textContent = "Dark Mode";
+    } else {
+        document.body.className = "dark";
+        btn.textContent = "Light Mode";
     }
 }
