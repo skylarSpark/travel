@@ -1,10 +1,14 @@
-function toggleTheme() {
-    let btn = document.getElementById("theme-toggle");
-    if (document.body.className === "dark") {
-        document.body.className = "";
+function switchTheme() {
+    let btn = document.getElementById("theme-switch");
+
+    /* 
+     * credit to Daweb Schools with video https://youtu.be/GzM42IXDPA4?si=R1hwdtsisBQFlXCN
+    */
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
         btn.textContent = "Dark Mode";
     } else {
-        document.body.className = "dark";
+        document.body.classList.add("dark");
         btn.textContent = "Light Mode";
     }
 }
